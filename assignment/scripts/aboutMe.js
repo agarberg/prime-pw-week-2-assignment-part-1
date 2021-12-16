@@ -5,7 +5,7 @@ let firstName = 'Adam';
 let lastName = 'Garberg';
 // 3 - Create a third variable called `fullName`, assign it the value of your first and last name
 // (remember, you already have variables for this, can you use those?)
-let fullName = firstName + ' ' + lastName;
+let fullName = `${firstName} ${lastName}` //OLD= fullName = firstName + ' ' + lastName;
 // 4 - Console log the value of `fullName`
 console.log( fullName );
 // 5 - Create a variable called `luckyNumber` and assign it the value of your lucky number.
@@ -65,18 +65,29 @@ let mostPets;
 if ( pets < friendsPets ){
   mostPets = friendsPets;
 }
-if ( pets > friendsPets ){
+else if ( pets >= friendsPets ){
   mostPets = pets;
 }
 console.log( mostPets )
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
-switch ( mostPets ){               /////i tried :(
-  case pets < friendsPets:
-    console.log( friendsPets );
+switch ( mostPets ){               //i tried :(
+  case pets < friendsPets:         //kind of
+    console.log( friendsPets );    //not really
     break;
   case pets > friendsPets:
     console.log( pets );
     break;
     }
+    // CORRECT SWITCH STATMENT:
+    switch (pets >= friendsPets) {
+    //If the above logs are true, do these things
+  case true:
+    mostPets = pets;
+    break;
+    //If the above is false, do these things.
+  case false:
+    mostPets = friendsPets;
+    break;
+}
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
 adventurous ? console.log ( "Adventures are great!" ) : console.log( "How about we stay home?" );
