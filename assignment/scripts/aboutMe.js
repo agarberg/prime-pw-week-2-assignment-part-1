@@ -69,22 +69,12 @@ else if ( pets >= friendsPets ){
   mostPets = pets;
 }
 console.log( mostPets )
+
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
-switch ( mostPets ){               //i tried :(
-  case pets < friendsPets:         //kind of
-    console.log( friendsPets );    //not really
-    break;
-  case pets > friendsPets:
-    console.log( pets );
-    break;
-    }
-    // CORRECT SWITCH STATMENT:
     switch (pets >= friendsPets) {
-    //If the above logs are true, do these things
   case true:
     mostPets = pets;
     break;
-    //If the above is false, do these things.
   case false:
     mostPets = friendsPets;
     break;
